@@ -1,0 +1,80 @@
+:root{
+    --skin-color:#510abb;
+}
+
+.vcn{
+    background: #000;
+    position: fixed;
+    z-index: 200;
+    bottom: 100px;
+    color: aliceblue;
+}
+
+
+
+button{
+    width: 80px;
+    height: 30px;
+    color: black;
+    background: rgb(187, 10, 178);
+  }
+  
+  .main-container{
+    position: relative;
+  }
+  
+  .slide-container{
+    display: none;
+  }
+  
+  .active{
+    display: block;
+  }
+  
+  .slide-container .slide{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 100vh;
+  }
+  .slide-container:nth-child(1) .slide{
+  background: linear-gradient(28.5deg, rgb(31, 8, 134) 60%, rgb(81, 3, 112) 40%);}
+  .slide-container:nth-child(2) .slide{
+  background: linear-gradient(28.5deg, rgba(27, 93, 95, 0.432) 60%, rgba(145, 230, 89, 0.568) 40%);}
+  .slide-container:nth-child(3) .slide{
+  background: linear-gradient(28.5deg, rgb(134, 8, 19) 60%, rgb(32, 3, 112) 40%);}
+  .slide-container:nth-child(4) .slide{
+  background: linear-gradient(28.5deg, rgb(221, 58, 8) 60%, rgb(51, 2, 2) 40%);}
+  .slide-container .slide .text-contant{
+  flex: 1 1 350px;
+  padding: 50px 50px;
+  animation: slideContent 1s linear;
+  }
+  .slide-container .slide .image{
+  flex: 1 1 500px;
+  padding: 50px 50px;
+  animation: slideImage .5s linear;
+  }
+  
+  @keyframes slideContent{
+  0%{
+  opacity: 0;
+  transform: translateX(-300px);
+  /* transform: rotate(360deg); */
+    }
+  
+  }
+  
+  
+  @keyframes slideImage{
+    0%{
+      opacity: 0;
+   margin-top: -300px;
+   transform: rotate(360deg);
+    }
+  
+  }
+  .slide-container .slide .image img{
+  width: 100%;
+  height: 300px;
+  }

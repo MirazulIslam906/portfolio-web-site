@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background:linear-gradient(rgb(20, 159, 224) ,rgb(17, 17, 163),rgb(166, 31, 4));
+            animation:anim 50s infinite;
+            animation-fill-mode: backwards;
+            animation-play-state: running;
+            animation-timing-function: ease;
+            animation-delay: 10s;
+            animation-fill-mode: both;
+            overflow: hidden;
+        }
+
+        @keyframes anim {
+            0%{
+                background:linear-gradient(rgb(20, 159, 224) ,rgb(17, 17, 163),rgb(166, 31, 4));
+            }
+            25%{
+                background:linear-gradient(rgb(197, 20, 224) ,rgb(57, 57, 206),rgb(156, 124, 117));
+            }
+
+            50%{
+                background:linear-gradient(rgb(112, 116, 65) ,rgb(149, 248, 67),rgb(26, 135, 231));
+            }
+            75%{
+                background:linear-gradient(rgb(136, 49, 134) ,rgb(2, 2, 245),rgb(6, 187, 243));
+            }
+            100%{
+
+                background:linear-gradient(rgb(79, 3, 84) ,rgb(6, 6, 132),rgb(224, 58, 24));
+            }
+        }
+        section{
+            width: 600px;
+            height: 300px;
+            background: rgb(5, 51, 116);
+            border-radius: 20px;
+            /* display: flex;
+            align-items: center;
+            justify-content: space-between; */
+            /* position: relative; */
+            overflow: hidden;
+        }
+        .sec{
+            width: 500px;
+            height: 150px;
+            background: rgb(241, 116, 81);
+            border-radius: 20px; 
+            position: absolute;
+            display: inline-block;
+            left: 50px;
+            top: 80px;
+            /* animation: bb 2s infinite; */
+
+        }
+
+        h1{
+            text-align: center;
+            margin-top: 160px;
+            font-size: 50px;
+            color: aquamarine;
+        }
+        p{
+            text-align: center;
+            margin-top: 500px;
+               transition: 2s;
+            font-size: 40px;
+            color: blanchedalmond;
+        }
+        .mir{
+            margin-top: -260px;
+        }
+
+        /* .pa{
+            margin-top: 50px; 
+            transition: 5s; 
+        } */
+        .sec:nth-child(2){
+            background: rgb(139, 5, 160);
+            left: 600px;
+            animation: ff 2s infinite;
+        }
+
+        .sec:nth-child(3){
+            background: rgb(10, 152, 228);
+            left: 1150px;
+            animation: aa 2s infinite;
+        }
+        .sec:nth-child(4){
+            background: rgb(255, 0, 4);
+            left: 1700px;
+            }
+        .sec:nth-child(5){
+            background: rgb(175, 18, 37);
+            left: 2250px;
+            }
+        
+        .all-sec{
+        
+            /* margin-left: 200px; */
+            position: relative;
+            width: 2000px;
+        }
+
+        .next,.prev{
+            margin-top: 300px;
+
+        }
+        .next{
+            margin-right: 20px;
+            padding: 10px 20px;
+        }
+        .prev{
+            margin-left: 20px;
+            padding: 10px 20px;
+        }
+
+       img{
+           width: 10px;
+           height: 10px;
+           border-radius: 5px;
+           margin-top: 0px;
+           position: absolute;
+           margin-left: 550px;
+           transition: 1s;
+       }
+       .imgs{
+           width: 70px;
+           height: 70px;
+           border-radius: 5px;
+           margin-top: -75px;
+           position: absolute;
+           margin-left: 220px;
+          transition: 2s;
+       }
+
+       .list{
+           margin-top: -20px;
+       }
+
+       #note{
+         position: absolute;  
+         right: 10px;
+         bottom: 10px; 
+         padding: 5px 10px;
+         background: rgb(80, 65, 65);
+         color: aliceblue;
+       }
+
+       #note:hover{
+         padding: 8px 15px;
+         background: rgb(0, 0, 0);
+          color: rgb(0, 136, 255);
+         transition: .5s;
+         border-radius: 40%;
+       }
+
+       .box{
+           position: absolute;
+           width: 100%;
+           height: 100vh;
+           background: rgba(242, 239, 246, 0.349);
+           z-index: 10;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+          display: none;
+      
+          
+       }
+      .box .main-box .text-box{
+          text-align: center;
+          margin-top: 50px;
+          position: relative;
+      }
+
+      .box .main-box .text-box h2{
+         color: rgb(228, 253, 253);
+      }
+      .box .main-box .text-box #ra{
+         color: rgb(251, 240, 255);
+         position: absolute;
+         bottom: -10px;
+         left: 130px;
+      }
+      .box .main-box .text-box h3{
+         color: rgb(0, 0, 0);
+         font-weight: bold;
+         font-size: 27px;
+      }
+      .text .list{
+           margin-bottom: 250px;
+           position: absolute;
+           left: 100px;
+           
+       }
+      .text .list span{
+         font-size:23px ;
+         color: white;
+
+       }
+
+
+       .box .main-box{
+           width: 60%;
+           height: 60%;
+           background: rgb(178, 177, 177);
+           border-radius: 20px;
+           box-shadow: 0 0 50px rgb(1, 14, 53);
+    
+       }
+       .box .main-box h1{
+           width: 90%;
+           height: 90%;
+           text-align: center;
+           /* margin-left: 500px; */
+           margin-top: -200px;
+           border-radius: 20px;
+           text-shadow: 10 10 50px rgb(128, 150, 217);
+           color: rgb(0, 0, 0);
+  
+       }
+        @keyframes ff {
+            0%{
+                background: rgb(50, 192, 236);
+            }
+            50%{
+                background: rgb(33, 132, 254);
+            }
+            100%{
+                background: rgb(140, 224, 252);
+            }
+        }
+        @keyframes bb {
+            0%{
+                background: rgb(252, 20, 20);
+            }
+            50%{
+                background: rgb(155, 1, 1);
+            }
+            100%{
+                background: rgb(128, 13, 236);
+            }
+        }
+        @keyframes aa {
+            0%{
+                background: rgb(50, 101, 50);
+            }
+            50%{
+                background: rgb(50, 198, 20);
+            }
+            100%{
+                background: rgb(43, 255, 0);
+            }
+        }
+    </style>
+    <section class="box">
+        <div class="main-box">
+            <div class="text-box">
+            <h2>===ব্যক্তিগত মতামত=== </h2>
+         <h3> আমার প্রিয় বন্ধুরা, আশা করি আল্লাহর অশেষ রহমতে আপনার সকলেই 
+            ভালো আছেন। বন্ধুরা আমি ওয়েব ডিজাইনের পাশাপাশি আনলাইনে টাকা রিচার্ডের 
+           সেবা দিয়ে থাকি। তাই যদি কোন ভাইয়া বা আাপুর কোন অফারের প্রয়োজন হয় তাহলে আমায় ইনবক্স করে জানাতে
+           পারেন।</h3>
+
+           <br>
+
+           <h2 id="ra">বি:দ্রঃ কেউ আমাকে নক না করে টাকা দিবেন না্</h2>
+        </div>
+        </div>
+    </section>
+    <button class="next">previous</button>
+    <section>
+        <div class="all-sec">
+        <div class="sec">
+            <img src="./imgs/b.jpeg" alt="">
+            <div class="text">
+                <h1>বাংলালিংক</h1>
+                <p>আজকের অফার।</p>
+                <div class="list">
+                   <span> [15 জিবি] + [30 জিবি] + [45 জিবি]</span>
+                </div> 
+            </div>
+
+        </div>
+        <div class="sec">
+            <img src="./imgs/g.jpeg" alt="">
+            <div class="text">
+                <h1>গ্রামীণ </h1>
+                <p>আজকের অফার।</p>
+                <div class="list">
+                    <span>
+                        জিপি :
+                        <br>
+                        30 জিবি - প্রতেকদিন 1 জিবি করে <big>30 দিন</big>
+                    </span>
+                </div>   
+            </div>
+        </div>
+        <div class="sec">
+            <img src="./imgs/t.png" alt="">
+            <div class="text">
+                <h1>টেলিটক</h1>
+                <p> দুঃখিত আজকের কোনো অফার নেই।</p>
+            </div>
+        </div>
+        <div class="sec">
+            <img src="./imgs/ai.png" alt="">
+            <div class="text">
+                <h1>এয়ারটেল</h1>
+                <p >আজকের অফার।</p>
+                <div class="list">
+                    <span>
+                        [15 জিবি] + [30 জিবি] + [45 জিবি]
+                        <br>
+                        [4 + 475] + [40 + 950] + [50 + 1000]
+                    </span>
+                 </div> 
+            </div>
+        </div>
+        <div class="sec">
+            <img src="./imgs/r.png" alt="">
+            <div class="text">
+                <h1>রবি </h1>
+                <p>আজকের অফার।</p>
+                <div class="list">
+                <span>
+                    [15 জিবি] + [30 জিবি] + [45 জিবি]
+                    <br>
+                    [12 + 200] + [15 + 400] + [60 + 1200]
+                </span>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <button id="note">
+        Click here
+    </button>
+    <!-- <button>previous</button> -->
+    <button class="prev">next</button>
+
+       
+
+    <script>
+        const p = document.querySelector('.prev');
+const q = document.querySelector('.next');
+const allSec = document.querySelector('.all-sec');
+const para = document.querySelectorAll('p');
+const img = document.querySelectorAll('img');
+const control = document.querySelector('#note');
+const box = document.querySelector('.box');
+
+// var count = 0
+
+box.addEventListener('click', (e)=>{
+if(e.target.classList.contains('box')){
+    box.style.display = 'none';
+    box.style.transition = '5s';
+}
+});
+control.addEventListener('click', () => {
+// alert('helo');
+box.style.display = 'flex';
+box.style.transition = '5s';
+
+
+});
+
+
+
+var ratio = 0;
+
+p.addEventListener('click',()=>{
+    ratio -= 550;
+//    console.log(ratio);
+//     allSec.style.marginLeft = ratio +'px';
+if(ratio <= -2750){
+    ratio = 0;  
+};
+// count ++;
+// if (count > 4) {
+//   count = 0;  
+// };
+// var a = count;
+// console.log(a);
+
+// para[a].style.marginTop = '-50px';
+
+para.forEach(item => {
+item.classList.add('mir');
+});
+img.forEach(item => {
+item.classList.add('imgs');
+});
+setTimeout(() => {
+    // para[a].style.marginTop = '5000px';
+    para.forEach(item => {
+        item.classList.remove('mir');
+        });
+}, 7000);
+setTimeout(() => {
+    // para[a].style.marginTop = '5000px';
+    img.forEach(item => {
+        item.classList.remove('imgs');
+        });
+}, 6000);
+
+
+ allSec.style.marginLeft = ratio +'px'; 
+ allSec.style.transition = '.50s'; 
+});
+
+q.addEventListener('click',()=>{
+    ratio += 550;
+   console.log(ratio);
+//     allSec.style.marginLeft = ratio +'px';
+if(ratio >= 0){
+    ratio = -2201;
+}
+ allSec.style.marginLeft = ratio +'px'; 
+ allSec.style.transition = '.50s'; 
+
+//  count = 4;
+// if (count < 4) {
+  
+// };
+// var a = count;
+// console.log(a);
+
+// para[a].style.marginTop = '-50px';
+// setTimeout(() => {
+//     para[a].style.marginTop = '5000px';
+// }, 5000);
+para.forEach(item => {
+    item.classList.add('mir');
+    });
+    img.forEach(item => {
+        item.classList.add('imgs');
+        });
+        
+    setTimeout(() => {
+        // para[a].style.marginTop = '5000px';
+        para.forEach(item => {
+            item.classList.remove('mir');
+            });
+    }, 7000);
+
+    setTimeout(() => {
+        // para[a].style.marginTop = '5000px';
+        img.forEach(item => {
+            item.classList.remove('imgs');
+            });
+    }, 6000);
+})
+    </script>
+</body>
+</html>
